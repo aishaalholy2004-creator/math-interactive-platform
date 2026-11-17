@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#152d3d">
+  <meta name="description" content="منصة تفاعلية في الرياضيات: منصة رياضيات للصف الثالث المتوسط بتحديات وشهادات شكر ولوحة خاصة بالمعلمة.">
+  <title>منصة تفاعلية في الرياضيات | رياضيات ثالث متوسط</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800;900&display=swap');
+    :root { --ink:#152d3d; --muted:#667581; --cream:#fbf8f2; --paper:#fffefa; --orange:#ff8a5b; --orange-dark:#ea6c3a; --mint:#d8f1e4; --mint-dark:#23876d; --purple:#e8e2ff; --lavender:#7764b6; --gold:#fac867; --border:#e6e7e4; --shadow:0 20px 70px rgba(28,51,61,.09); }
+    * {box-sizing:border-box;} html{scroll-behavior:smooth} body{margin:0;background:var(--cream);color:var(--ink);font-family:'Tajawal',Tahoma,Arial,sans-serif;line-height:1.65} button,input{font:inherit} button{cursor:pointer} button:disabled{opacity:.52;cursor:not-allowed} a{color:inherit;text-decoration:none} [hidden]{display:none!important}
+    :focus-visible{outline:3px solid #5baec3;outline-offset:4px}.container{max-width:1200px;padding:0 27px;margin:0 auto}
+    header{background:rgba(251,248,242,.95);backdrop-filter:blur(15px);position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(21,45,61,.07)}
+    .header-inner{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px;font-size:23px;font-weight:900;white-space:nowrap;letter-spacing:-.8px}
+    .brand-mark{width:45px;height:45px;background:var(--ink);display:grid;place-items:center;border-radius:15px;transform:rotate(-9deg);color:#fff;font-weight:900;font-size:29px;box-shadow:5px 6px 0 #dce9dc}.brand-mark span{transform:rotate(9deg)}
+    nav{display:flex;align-items:center;gap:23px;color:#455764;font-size:15px;font-weight:800} nav button{border:0;background:none;color:inherit;padding:10px 4px}
+    .header-cta{background:var(--ink);color:white;border:0;padding:12px 20px;border-radius:14px;font-weight:800;box-shadow:0 6px 0 rgba(21,45,61,.12)}
+    main{min-height:calc(100svh - 155px)}
+    .hero{padding:77px 0 58px;display:grid;grid-template-columns:1.05fr .95fr;gap:62px;align-items:center}
+    .eyebrow{display:inline-flex;gap:9px;align-items:center;padding:7px 15px;background:#e8efeb;border-radius:99px;color:#385d53;font-weight:800;font-size:14px}
+    .eyebrow i{width:9px;height:9px;background:#61ba9e;border-radius:50%;display:block}
+    h1{font-size:clamp(44px,5.4vw,77px);line-height:1.17;letter-spacing:-2.4px;margin:22px 0 22px;font-weight:900}
+    h1 .marker{position:relative;display:inline-block;z-index:0;color:var(--orange-dark)} h1 .marker:after{content:"";position:absolute;right:0;left:0;bottom:3px;height:15px;background:#ffd3bb;z-index:-1;border-radius:10px;transform:rotate(-1deg)}
+    .hero-p{font-size:19px;color:#576a75;max-width:565px;line-height:1.9;margin:0 0 25px}
+    .hero-ctas{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:28px 0}
+    .btn{border:0;border-radius:16px;display:inline-flex;align-items:center;gap:11px;justify-content:center;padding:15px 26px;font-size:17px;font-weight:900;min-height:55px;transition:transform .2s,background .2s,box-shadow .2s}.btn:hover:not(:disabled){transform:translateY(-3px)}
+    .btn-primary{background:var(--ink);color:#fff;box-shadow:0 6px 0 #aeb9be}.btn-primary:hover:not(:disabled){background:#234a5c}
+    .btn-orange{background:var(--orange);color:#271e1a;box-shadow:0 6px 0 #e9d3c5}.btn-orange:hover:not(:disabled){background:#ff9b76}
+    .btn-outline{border:1.5px solid #cdd8d8;background:#fffdfa;color:var(--ink)}.btn-light{background:#fff;color:var(--ink);border:1px solid #e5e9e7}.btn-sm{min-height:40px;padding:9px 16px;font-size:14px;border-radius:12px}
+    .hero-meta{display:flex;gap:18px;align-items:center;flex-wrap:wrap;color:var(--muted);font-size:14px;font-weight:700}.meta-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#f5b26e;margin-left:7px}
+    .art{min-height:475px;position:relative;display:grid;place-items:center;isolation:isolate}
+    .art-bg{position:absolute;width:92%;height:92%;border-radius:48% 52% 43% 57% / 50% 40% 60% 50%;background:#e5f0e8;transform:rotate(-9deg);z-index:-1}.art-ring{position:absolute;width:76%;height:79%;border:2px dashed #b5d8ce;border-radius:50%;transform:rotate(25deg);z-index:-1}
+    .math-card{width:min(100%,420px);transform:rotate(-4deg);background:#fffdfb;border:2px solid #e1e6e2;box-shadow:10px 14px 0 rgba(71,119,109,.13),0 25px 55px rgba(25,63,65,.12);border-radius:26px;padding:25px 24px;position:relative}
+    .card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:21px}.card-top strong{font-size:18px}.card-top .count{background:#f4eddd;padding:5px 12px;border-radius:20px;font-weight:800;color:#93703a;font-size:13px}
+    .question-demo{font-size:27px;font-weight:900;margin:0 0 20px;text-align:center;direction:ltr}.fake-opt{font-size:17px;font-weight:800;display:flex;justify-content:space-between;align-items:center;border:1px solid #e8eae7;border-radius:13px;padding:10px 13px;margin:9px 0;background:#fff}.fake-opt .circle{width:25px;height:25px;border:2px solid #d9dedb;border-radius:50%}.fake-opt.selected{border-color:#68b69f;background:#e8f7ef}.fake-opt.selected .circle{background:#5aaf95;border-color:#5aaf95;color:#fff;display:grid;place-items:center}.fake-opt.selected .circle:after{content:'✓';font-size:15px}
+    .floating{position:absolute;display:grid;place-items:center;font-weight:900;box-shadow:0 10px 28px rgba(30,69,64,.09)}.shape1{top:28px;left:9px;background:#ffe0c2;border-radius:17px;width:78px;height:74px;font-size:40px;transform:rotate(13deg)}.shape2{bottom:31px;right:10px;background:#e5dfff;border-radius:50%;width:78px;height:78px;font-size:34px;transform:rotate(-8deg)}.shape3{top:3px;right:39px;background:#fffaf0;border:2px solid #f8d7a6;border-radius:15px;padding:8px 16px;font-size:19px;transform:rotate(7deg)}
+    .stats{background:var(--ink);color:white;border-radius:25px;padding:20px 28px;display:flex;align-items:center;justify-content:space-around;gap:12px;margin:0 auto 78px;flex-wrap:wrap}.stat{display:flex;align-items:center;gap:15px;padding:3px 20px}.stat-num{font-size:34px;font-weight:900;color:#ffcc94;line-height:1.1}.stat-txt{font-weight:700;font-size:15px;color:#e4eae8}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:30px}.section-tag{font-size:14px;font-weight:900;color:#c76643;letter-spacing:1px}.section-title{font-size:clamp(29px,3.5vw,43px);font-weight:900;margin:4px 0;line-height:1.3;letter-spacing:-1px}.section-sub{color:var(--muted);font-size:17px;margin:8px 0 0;max-width:700px}
+    .domains{padding-bottom:88px;scroll-margin-top:115px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}.domain{border:1px solid #ecece7;text-align:right;border-radius:22px;padding:23px 20px 22px;background:#fffdfa;min-height:255px;display:flex;flex-direction:column;align-items:flex-start;box-shadow:0 8px 18px rgba(24,52,55,.025);transition:.2s}.domain:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#d6e1dd}.domain-icon{font-size:34px;line-height:1;background:#ffede5;width:64px;height:64px;border-radius:20px;display:grid;place-items:center;font-weight:900;margin-bottom:21px}.domain:nth-child(2) .domain-icon{background:#e9e2ff}.domain:nth-child(3) .domain-icon{background:#d8f1e4}.domain:nth-child(4) .domain-icon{background:#fff0ca}.domain h3{font-size:20px;font-weight:900;margin:0 0 4px}.domain p{color:#71808a;font-size:14px;line-height:1.75;margin:0 0 15px}.domain-foot{width:100%;margin-top:auto;display:flex;align-items:center;justify-content:space-between;color:#cf7350;font-weight:900;font-size:14px}.domain-score{color:#748881;font-weight:800;font-size:12px}
+    .about{background:#e5efea;border-radius:30px;padding:38px 50px;display:grid;grid-template-columns:1.2fr .8fr;gap:20px;align-items:center;margin-bottom:77px;overflow:hidden}.about h2{font-size:35px;line-height:1.45;margin:0 0 10px;font-weight:900}.about p{color:#576e66;margin:0 0 20px;font-size:16px;max-width:540px}.about-right{position:relative;min-height:215px;display:grid;place-items:center}.certificate-mock{background:#fffdf9;border:7px double #bdcba8;width:260px;height:185px;box-shadow:12px 13px 0 #bdd4c7;transform:rotate(-8deg);text-align:center;padding:17px 8px}.certificate-mock .seal{font-size:25px}.certificate-mock b{font-size:19px}.certificate-mock div:last-child{font-size:13px;color:#65736c;margin-top:9px}
+    .tiny-note{font-size:12px;color:#7b8b8d} footer{border-top:1px solid #e3e6e1;padding:24px 0;margin-top:35px;color:#657780;font-size:13px}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .view{animation:fadein .35s ease both}.page-head{padding:44px 0 24px}.breadcrumbs{font-size:13px;font-weight:800;color:#768b92}.breadcrumbs button{border:0;background:none;color:#416e76;padding:2px}
+    .quiz-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:25px;padding:20px 0 75px}.quiz-card{background:#fffdfa;border:1px solid #e5e9e5;border-radius:25px;padding:30px;box-shadow:var(--shadow)}
+    .quiz-top{display:flex;align-items:center;justify-content:space-between;gap:12px}.quiz-badge{display:inline-flex;background:#ebf2ee;color:#37695b;border-radius:9px;padding:6px 12px;font-size:13px;font-weight:900}.quiz-counter{color:#687e85;font-size:14px;font-weight:900}.progress-track{width:100%;height:11px;background:#edf0ed;border-radius:99px;margin:24px 0 33px;overflow:hidden}.progress-inner{width:0;height:100%;background:linear-gradient(90deg,#52a994,#82c2a8);border-radius:99px;transition:width .3s}
+    .question-index{font-size:14px;font-weight:900;color:#d4714f;margin-bottom:12px}.question-title{font-weight:900;font-size:clamp(23px,3vw,32px);line-height:1.65;margin:0 0 26px;white-space:pre-line}.answers{display:grid;gap:12px}
+    .answer{display:flex;align-items:center;gap:12px;border:1.7px solid #e5eae6;background:white;border-radius:15px;padding:16px 19px;min-height:62px;color:#233d49;font-weight:800;font-size:18px;text-align:right;transition:.15s;width:100%}.answer:hover:not(:disabled){border-color:#7aaf9f;background:#f6faf7}.answer .answer-dot{display:grid;place-items:center;flex-shrink:0;width:30px;height:30px;border-radius:10px;border:1px solid #dfe6e2;color:#7a8d8f;font-size:13px;background:#f9fbf9}.answer.chosen{border-color:#638eaf;background:#eff5fc}.answer.chosen .answer-dot{background:#628fb1;color:white;border-color:#628fb1}.answer.correct{border-color:#3aab81;background:#e6f7ed}.answer.correct .answer-dot{background:#229975;color:#fff;border-color:#229975}.answer.wrong{border-color:#e48878;background:#fff0e9}.answer.wrong .answer-dot{background:#d36c5d;color:#fff;border-color:#d36c5d}
+    .feedback{background:#f1f7f0;border:1px solid #cddfce;border-radius:16px;padding:16px 18px;margin-top:23px}.feedback.bad{background:#fff7ed;border-color:#efd8be}.feedback strong{display:block;font-size:18px;margin-bottom:3px}.feedback p{margin:0;color:#4b6663;font-size:15px}
+    .quiz-actions{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:25px;flex-wrap:wrap}.quiz-tip{color:#829195;font-size:13px}
+    .side-card{background:#eaf3ed;border-radius:22px;padding:26px;align-self:start}.side-card h3{margin:4px 0 12px;font-size:20px}.side-icon{display:grid;place-items:center;width:53px;height:53px;border-radius:16px;background:#d2e7d9;font-size:29px}.side-card p{font-size:14px;color:#57746d;margin:0 0 14px}.side-card .note{margin-top:15px;padding-top:15px;border-top:1px solid #c6ddd4;font-weight:800;color:#52786c;font-size:13px}
+    .result-shell{padding:45px 0 75px;max-width:810px;margin:auto;text-align:center}.result-mark{font-size:57px;width:110px;height:110px;background:#fff0ce;border-radius:34px;display:grid;place-items:center;margin:0 auto 17px;transform:rotate(-7deg)}.result-shell h2{font-size:clamp(32px,4vw,45px);line-height:1.3;margin:0 0 13px}.result-shell>p{font-size:17px;color:#6e8186;margin:0 0 23px}.score-panel{display:flex;align-items:center;justify-content:space-evenly;gap:20px;border:1px solid #e3e9e4;background:#fffdfa;border-radius:24px;padding:26px;margin:25px 0;flex-wrap:wrap}.score-big{font-size:65px;font-weight:900;line-height:1;color:#2b8a71}.score-big small{font-size:26px;color:#92a5a4}.score-label{font-size:13px;color:#738287;font-weight:800}.result-detail{font-size:22px;font-weight:900}.result-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:27px}.insight{background:#eee8ff;border-radius:16px;text-align:right;padding:18px 22px;color:#4c4975;margin-top:19px;font-size:14px}
+    .cert-page{max-width:1150px;padding:35px 0 65px;margin:auto}.cert-actions{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:28px}.cert-buttons{display:flex;gap:10px;flex-wrap:wrap}
+    .cert-outer{background:#fffdf9;aspect-ratio:1.414/1;width:100%;position:relative;border:14px solid #213c45;overflow:hidden;box-shadow:0 22px 48px rgba(30,51,60,.12);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:35px 42px;isolation:isolate}.cert-outer:before{content:'';position:absolute;inset:12px;border:2px solid #d8b977;pointer-events:none}.cert-outer:after{content:'';position:absolute;inset:20px;border:1px solid #dedfd2;pointer-events:none}
+    .cert-corner{position:absolute;width:190px;height:190px;background:#e4f0e8;border-radius:55% 45% 60% 40%;top:-91px;right:-79px;transform:rotate(25deg);z-index:-1}.cert-corner.bottom{top:auto;right:auto;bottom:-107px;left:-77px;background:#fbe9da}.cert-tiny{font-weight:900;letter-spacing:3px;color:#6c887e;font-size:clamp(10px,1.35vw,17px)}.cert-star{font-size:clamp(25px,4vw,47px);line-height:1.4;color:#e0aa62}.cert-outer h1{font-size:clamp(27px,5vw,67px);letter-spacing:-1px;margin:5px 0 2px;color:#203e44}.cert-desc{color:#647b77;font-size:clamp(12px,2vw,24px);margin:0}.cert-name{font-size:clamp(25px,4.2vw,55px);font-weight:900;color:#c77b48;margin:8px 0 7px;border-bottom:3px solid #d3b88a;max-width:85%;padding:0 35px;line-height:1.35;overflow-wrap:anywhere}.cert-body{font-size:clamp(12px,1.8vw,22px);max-width:80%;margin:4px auto;color:#37505a;line-height:1.7}.cert-foot{display:flex;align-items:center;justify-content:center;gap:15px;margin-top:14px;font-size:clamp(11px,1.5vw,19px);color:#70837f}.cert-seal{width:clamp(55px,8vw,110px);height:clamp(55px,8vw,110px);border:4px double #cfab66;border-radius:50%;display:grid;place-items:center;color:#af8b4d;font-size:clamp(28px,4vw,50px);transform:rotate(-12deg);margin-top:14px}
+    .modal-backdrop{position:fixed;inset:0;background:rgba(15,30,36,.65);z-index:100;display:grid;place-items:center;padding:20px;backdrop-filter:blur(5px)}.modal{width:min(100%,490px);background:#fffcf7;padding:34px;border-radius:28px;box-shadow:0 30px 100px rgba(0,0,0,.22);position:relative}.modal h2{font-size:32px;font-weight:900;line-height:1.35;margin:9px 0}.modal p{color:#63777c;margin:0 0 19px}.modal label{font-size:14px;font-weight:900;display:block;margin-bottom:8px}.modal input{width:100%;border:1.7px solid #d6dfdd;background:#fff;padding:15px 16px;border-radius:14px;font-size:18px;color:#162f3d;outline:none}.modal input:focus{border-color:#61a793;box-shadow:0 0 0 4px #dcefe7}.modal .btn{width:100%;margin-top:18px}.close{border:0;background:#f0eee9;color:#65777b;width:32px;height:32px;border-radius:11px;position:absolute;top:21px;left:20px;font-size:20px}.error{font-size:13px;color:#b64b48;margin-top:8px;min-height:20px}.modal-note{font-size:12px!important;margin:12px 0 0!important}
+    @keyframes fadein{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:1000px){.hero{gap:20px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero h1{font-size:55px}.art{min-height:405px}.math-card{width:340px}.quiz-layout{grid-template-columns:1fr 240px}}
+    @media(max-width:760px){.container{padding:0 19px}.header-inner{min-height:72px}.brand{font-size:20px}nav{display:none}.header-cta{font-size:13px;padding:10px 13px}.hero{padding:48px 0 24px;grid-template-columns:1fr;gap:6px}.hero h1{font-size:clamp(42px,9vw,58px);margin:15px 0}.hero-p{font-size:17px}.art{min-height:360px;margin:15px 0 25px}.math-card{width:min(75%,355px);padding:19px}.shape1{left:16px}.shape2{right:8px}.stats{margin-bottom:60px;padding:19px 10px;justify-content:center}.stat{padding:4px 11px;gap:8px}.stat-num{font-size:27px}.stat-txt{font-size:12px}.section-head{display:block}.domains{padding-bottom:50px}.about{grid-template-columns:1fr;padding:30px 24px}.about h2{font-size:29px}.about-right{min-height:195px}.quiz-layout{grid-template-columns:1fr;padding-top:10px}.quiz-card{padding:19px}.side-card{display:none}.cert-outer{padding:15px 17px;border-width:8px}.cert-outer:before{inset:6px}.cert-outer:after{inset:12px}.cert-corner{width:110px;height:110px;top:-65px;right:-48px}.cert-corner.bottom{bottom:-65px;left:-48px}.cert-name{padding:0 12px}.cert-page{padding-bottom:40px}}
+    @media(max-width:430px){.grid{gap:11px}.domain{padding:17px 14px;min-height:245px}.domain-icon{width:48px;height:48px;font-size:26px;border-radius:14px;margin-bottom:15px}.domain h3{font-size:18px}.domain p{font-size:12px}.domain-foot{font-size:12px}.math-card{width:83%}.floating.shape1{width:54px;height:52px;font-size:28px}.floating.shape2{width:56px;height:56px;font-size:23px}.floating.shape3{font-size:13px}.quiz-tip{display:none}.answer{padding:12px;font-size:16px}.cert-foot{margin-top:6px}.cert-seal{margin-top:3px}.cert-name{margin:2px 0}.cert-outer h1{margin:0}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+    @media print{ @page{size:A4 landscape;margin:0} html,body{background:#fff!important;margin:0!important;padding:0!important;width:100%!important;height:100%!important;-webkit-print-color-adjust:exact;print-color-adjust:exact} header,footer,.cert-actions,.page-head,.print-hide,#homeView,#quizView,#resultView,#modalBack,#toast{display:none!important}#certificateView{display:block!important;padding:0!important;margin:0!important;max-width:none!important}.cert-page{width:100vw!important;height:100vh!important;padding:0!important;margin:0!important;max-width:none!important;display:flex!important;align-items:center!important;justify-content:center!important}.cert-outer{box-shadow:none!important;width:100vw!important;height:100vh!important;aspect-ratio:auto!important;border-width:12px!important}.cert-outer h1{font-size:55px!important}.cert-name{font-size:46px!important}.cert-desc,.cert-body{font-size:21px!important}.cert-foot{font-size:17px!important}.cert-tiny{font-size:15px!important}.cert-seal{height:80px!important;width:80px!important;font-size:41px!important}main{min-height:unset!important}}
+
+    .platform-controls{background:#eef5ed;border:1px solid #d5e6d5;border-radius:18px;padding:17px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:20px}.platform-controls>div{margin-left:auto}.platform-controls strong{color:#244b44;font-size:16px}.platform-controls p{margin:4px 0;color:#647d73;font-size:13px}.platform-controls input[type="text"]{background:#fff;border:1px solid #c8dad1;border-radius:12px;padding:11px;min-width:170px;flex:1;font:inherit}.platform-switch,.publish-check{display:flex;align-items:center;gap:8px;font-weight:800;color:#2a5146}.platform-switch input,.publish-check input{width:18px;height:18px;accent-color:#2e8271}.public-notice{margin-top:15px;padding:12px 16px;border:1px solid #d3dfd8;background:#e9f4e8;color:#365f52;border-radius:12px;font-weight:700}.public-notice.closed{background:#fff2ed;border-color:#eecfbc;color:#935234}.header-actions,.admin-top-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+    .teacher-entry{background:#fff;border:1px solid #d5e0de;border-radius:13px;color:#375b5a;padding:11px 16px;font-weight:900;white-space:nowrap}
+    .school-credit{display:flex;gap:7px;flex-wrap:wrap;flex-direction:column;color:#4f756b;background:#eaf3ed;border-right:4px solid #72bba4;border-radius:12px;padding:12px 17px;max-width:440px;margin:12px 0}.school-credit span{font-size:14px}
+    .connection-banner{background:#fff5e5;color:#745132;border:1px solid #ecd4ab;border-radius:12px;padding:11px 16px;margin-top:17px;font-size:14px;font-weight:700}.connection-banner span{font-weight:400}
+    .sync-status{font-size:14px;font-weight:800;color:#536f63;margin:12px auto;max-width:550px}.sync-status.sync-error{color:#9f5342}
+    .cert-school{color:#617773;font-size:clamp(12px,1.8vw,18px);font-weight:800;margin:8px 0 -2px;z-index:1}.cert-school span{color:#cba25e;padding:0 8px}
+    .dashboard-shell{padding-top:44px;padding-bottom:70px}.dashboard-title{display:flex;align-items:start;justify-content:space-between;gap:20px;margin-bottom:28px;flex-wrap:wrap}
+    .dashboard-title h2{margin:5px 0}.dashboard-title p{margin:4px 0}.dash-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:27px}
+    .dash-stat{border:1px solid #e0e7df;background:#fffdfa;padding:21px;border-radius:19px;box-shadow:0 7px 18px #152d3d09}.dash-stat span{display:block;color:#74817f;font-weight:700;font-size:14px}.dash-stat strong{font-size:32px;color:#1c544f;display:block;margin-top:6px}
+    .dash-tabs{display:flex;gap:9px;margin:0 0 16px;flex-wrap:wrap}.dash-tabs button{background:#f2f0ea;border:1px solid #dee2d9;border-radius:12px;padding:13px 19px;color:#60706d;font-weight:900}.dash-tabs button.tab-active{background:#193e45;color:white;border-color:#193e45}
+    .admin-panel{background:#fffdfa;border:1px solid #e5e9e4;border-radius:24px;padding:25px;box-shadow:0 8px 22px #152d3d08}
+    .admin-panel-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.admin-panel-head h3{font-size:23px;font-weight:900;margin:0 0 3px}.admin-panel-head p{color:#75847f;font-size:14px;margin:0 0 15px}.admin-toolbar{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}.admin-toolbar input,.admin-toolbar select{font:inherit;background:#fff;border:1px solid #d8e0db;border-radius:13px;padding:12px 15px;color:#234750}.admin-toolbar input{min-width:210px;flex:1}
+    .table-scroll{overflow-x:auto}.data-table{border-collapse:collapse;width:100%;min-width:680px;text-align:right}.data-table th,.data-table td{padding:14px 12px;border-bottom:1px solid #e9ede7;font-size:14px}.data-table th{background:#eaf2ec;color:#315b54;font-size:13px}.data-table tr:hover td{background:#fbfcfa}.table-empty{text-align:center;color:#71817d!important;padding:25px!important}.mini-btn{border:1px solid #cedcd5;border-radius:9px;color:#24544f;background:#fff;padding:6px 10px;font-size:12px;font-weight:900;margin:2px}.mini-btn.danger{color:#9e5143;border-color:#e9d1cd}.percent-chip{background:#edf5e9;color:#2d7356;padding:5px 10px;border-radius:99px;font-weight:900;white-space:nowrap}
+    .admin-error{padding:12px 16px;border-radius:13px;background:#fff2ef;border:1px solid #e6afa2;color:#a04436;margin:16px 0}.admin-hint{background:#f3f7f0;border:1px solid #d9e6d5;border-radius:13px;padding:12px 15px;color:#4c705e;font-size:14px}.question-count{color:#788982;font-weight:800;font-size:14px;margin:12px 0}.managed-questions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.managed-q{border:1px solid #e2e8e1;border-radius:17px;padding:18px;background:#fff}.managed-q h4{font-size:16px;line-height:1.6;margin:8px 0}.managed-q .q-category{font-size:12px;color:#558475;font-weight:900}.managed-q p{font-size:13px;color:#697975;margin:4px 0 12px}.managed-q-actions{display:flex;gap:5px;align-items:center;flex-wrap:wrap}.managed-q .correct-choice{color:#23876d;font-weight:800}
+    .teacher-login-modal{max-width:480px}.modal select,.modal textarea{width:100%;font:inherit;background:#fff;border:1.5px solid #d9ded9;border-radius:12px;padding:11px 13px;color:#223e43}.modal textarea{resize:vertical}.question-modal{width:min(100%,760px);max-height:92dvh;overflow-y:auto}.option-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px 13px}.option-grid label{display:block}.option-grid input{width:100%;margin-top:4px}.editor-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    @media(max-width:900px){.dash-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.managed-questions{grid-template-columns:1fr}.header-inner{gap:7px}.brand{font-size:17px}}
+    @media(max-width:500px){.platform-controls>div{width:100%}.platform-controls input[type="text"]{width:100%;min-width:100%}.header-cta{display:none}.teacher-entry{font-size:12px;padding:10px}.brand{font-size:14px}.brand-mark{width:36px;height:36px;font-size:23px}.dash-stats{gap:8px}.dash-stat{padding:15px}.dash-stat strong{font-size:26px}.admin-panel{padding:14px}.option-grid{grid-template-columns:1fr}.cert-school{font-size:10px}}
+    @media print{#adminView,#teacherLoginBack,#questionModal,#resultSyncStatus,.connection-banner{display:none!important}.cert-school{font-size:19px!important}}
+  </style>
+</head>
+<body>
+<header id="siteHeader">
+  <div class="container header-inner">
+    <a href="#الرئيسية" class="brand" id="homeLogo" aria-label="العودة للرئيسية"><span class="brand-mark"><span>∑</span></span><span>منصة تفاعلية في الرياضيات<span style="color:#e97c54">.</span></span></a>
+    <nav aria-label="القائمة الرئيسية"><button type="button" data-home>الرئيسية</button><button type="button" data-domains>مجالات التدريب</button><button type="button" data-about>عن المنصة</button></nav>
+    <div class="header-actions"><button type="button" class="teacher-entry" id="teacherEntry">لوحة المعلمة</button><button class="header-cta" id="quickStart">ابدئي التحدّي <span aria-hidden="true">↗</span></button></div>
+  </div>
+</header>
+<main>
+  <div id="homeView" class="view"><div class="container"><div id="publicNotice" class="public-notice" hidden></div><div class="connection-banner" id="connectionBanner" hidden>وضع المعاينة: النتائج على هذا الجهاز فقط إلى أن تُربط قاعدة البيانات. <span>اطلبي من مشرفة المنصة إتمام الربط.</span></div></div>
+    <div class="container">
+      <section class="hero" aria-labelledby="heroTitle">
+        <div>
+          <div class="eyebrow"><i></i> رحلة التميّز تبدأ من هنا · ثالث متوسط</div>
+          <h1 id="heroTitle">منصة <span class="marker">تفاعلية</span><br>في الرياضيات</h1>
+          <p class="hero-p">منصة تفاعلية في الرياضيات لطالبات الصف الثالث المتوسط. تدربي وتنافسي، وتابعي تقدّمك، واحصلي على شهادة شكر باسمك بعد كل تحدٍّ.</p><div class="school-credit"><strong>المعلمة: هديه سالم العنزي</strong><span>المتوسطة التاسعة بعرعر</span></div>
+          <div class="hero-ctas"><button class="btn btn-orange" id="heroStart">ابدئي التحدّي <span>←</span></button><button class="btn btn-outline" data-domains>استكشفي التدريبات <span>↙</span></button></div>
+          <div class="hero-meta"><span><i class="meta-dot"></i> للصف الثالث المتوسط فقط</span><span><i class="meta-dot"></i> تصحيح فوري</span><span><i class="meta-dot"></i> شهادة باسمك</span></div>
+        </div>
+        <div class="art" aria-hidden="true"><div class="art-bg"></div><div class="art-ring"></div><div class="floating shape1">π</div><div class="floating shape2">✦</div><div class="floating shape3">+ ١٠ نقاط</div>
+          <div class="math-card"><div class="card-top"><strong>سؤال اليوم ✨</strong><span class="count">رياضيات ٣م</span></div><p class="question-demo">3x + 5 = 20</p><div class="fake-opt"><span>س = ٣</span><i class="circle"></i></div><div class="fake-opt selected"><span>س = ٥</span><i class="circle"></i></div><div class="fake-opt"><span>س = ٧</span><i class="circle"></i></div></div>
+        </div>
+      </section>
+      <section class="stats" aria-label="مميزات المنصة"><div class="stat"><div class="stat-num">٤</div><div class="stat-txt">مجالات<br> رياضية</div></div><div class="stat"><div class="stat-num">٦٠</div><div class="stat-txt">سؤالاً<br> تدريبياً</div></div><div class="stat"><div class="stat-num">٢٠</div><div class="stat-txt">سؤالاً في<br> التحدي الشامل</div></div><div class="stat"><div class="stat-num">١</div><div class="stat-txt">شهادة شكر<br> باسمك</div></div></section>
+      <section class="domains" id="domains" aria-labelledby="domainTitle"><div class="section-head"><div><div class="section-tag">اختاري مسارك</div><h2 id="domainTitle" class="section-title">كل مهارة، خطوة للأمام.</h2><p class="section-sub">تدرّبي على مجال واحد أو خوضي التحدي الشامل الذي يجمع المجالات الأربعة.</p></div><button class="btn btn-primary btn-sm" id="allStart">التحدي الشامل ←</button></div><div class="grid" id="domainGrid"></div></section>
+      <section class="about" id="about"><div><div class="section-tag">الخطوة الأخيرة ✦</div><h2>تعبك ما يروح بدون تقدير.</h2><p>بعد ما تكملين أي تدريب، تظهر لك شهادة شكر وتقدير باسمك ونتيجتك. تقدرين تنزّلينها كصورة أو تحفظينها PDF للطباعة.</p><button class="btn btn-outline btn-sm" id="aboutStart">ابدئي واستحقي شهادتك ←</button></div><div class="about-right"><div class="certificate-mock"><div class="seal">✦</div><b>شهادة شكر وتقدير</b><div>لكل مجتهدة تصنع إنجازها ✧</div></div></div></section>
+    </div>
+  </div>
+  <div id="quizView" class="view" hidden>
+    <div class="container"><div class="page-head"><div class="breadcrumbs"><button data-home>الرئيسية</button> / <span id="quizBreadcrumb">التحدي الشامل</span></div><h2 class="section-title" id="quizHeading">التحدي الشامل</h2><p class="section-sub" id="quizSub">ركّزي، وفكّري، واختاري الإجابة الصحيحة.</p></div><div class="quiz-layout"><section class="quiz-card" aria-live="polite"><div class="quiz-top"><span class="quiz-badge" id="quizDomainBadge">الأعداد والعمليات</span><span class="quiz-counter" id="quizCounter">السؤال ١ من ٢٠</span></div><div class="progress-track" role="progressbar" aria-label="تقدم الاختبار" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressTrack"><div class="progress-inner" id="progressInner"></div></div><div class="question-index">اختاري الإجابة الأنسب</div><h3 class="question-title" id="questionText"></h3><div class="answers" id="answers"></div><div class="feedback" id="feedback" hidden><strong id="feedbackHead"></strong><p id="feedbackBody"></p></div><div class="quiz-actions"><button class="btn btn-primary" id="nextBtn" disabled>تحققي من الإجابة ←</button><span class="quiz-tip">خذي وقتك، الفهم أهم من السرعة</span></div></section><aside class="side-card"><span class="side-icon">✎</span><h3>معلومة صغيرة</h3><p>بعد كل سؤال بتعرفين الإجابة الصحيحة وسببها، عشان تتطور مهاراتك خطوة بخطوة.</p><div class="note" id="quizNameSide">المتدرّبة: —</div><div class="note" id="quizLiveScore">النقاط: ٠</div></aside></div></div>
+  </div>
+  <div id="resultView" class="view" hidden><div class="container"><section class="result-shell"><div class="result-mark">🏆</div><h2 id="resultTitle">أحسنتِ!</h2><p id="resultText">كل محاولة تقرّبك أكثر للتميز</p><div class="score-panel"><div><div class="score-label">نتيجتك النهائية</div><div class="score-big"><span id="resultPercent">٠</span><small>٪</small></div></div><div><div class="score-label">الإجابات الصحيحة</div><div class="result-detail" id="resultCount">٠ من ٢٠</div><div style="font-size:13px;color:#78908d" id="resultDomain">التحدي الشامل</div></div></div><div class="insight" id="resultInsight">تذكّري: الخطأ فرصة للتعلّم، مو نهاية الطريق.</div><p class="sync-status" id="resultSyncStatus" role="status"></p><div class="result-actions"><button class="btn btn-orange" id="goCert">شاهدي شهادة الشكر ✦</button><button class="btn btn-outline" id="retry">أعيدي المحاولة ↺</button><button class="btn btn-light" data-home>الرئيسية</button></div></section></div></div>
+  <div id="certificateView" class="view" hidden><div class="container cert-page"><div class="cert-actions"><div><div class="section-tag">إنجازك يستحق التقدير ✦</div><h2 class="section-title">شهادة الشكر الخاصة بك</h2><p class="section-sub">يمكنك حفظها كصورة أو اختيار الطباعة ثم «حفظ PDF».</p></div><div class="cert-buttons"><button class="btn btn-outline btn-sm" id="saveImage">↓ تحميل صورة</button><button class="btn btn-primary btn-sm" id="printCert">طباعة / حفظ PDF</button><button class="btn btn-light btn-sm" id="backToResult">النتيجة</button></div></div><section class="cert-outer" id="certificate" aria-label="شهادة شكر وتقدير"><div class="cert-corner"></div><div class="cert-corner bottom"></div><div class="cert-tiny">منصة تفاعلية في الرياضيات • رياضيات</div><div class="cert-star">✦ ✧ ✦</div><h1>شهادة شكر وتقدير</h1><p class="cert-desc">تُمنح بكل فخر للطالبة المجتهدة</p><div class="cert-name" id="certificateName">اسم الطالبة</div><p class="cert-body">تقديرًا لمشاركتها وإتمامها <strong id="certificateKind">التحدي الشامل في الرياضيات</strong> للصف الثالث المتوسط، وإظهارها روح المثابرة والتعلّم.</p><div class="cert-foot"><span id="certificateScore">النتيجة: ٠٪</span><span>✦</span><span id="certificateDate">التاريخ</span></div><div class="cert-school">المعلمة: هديه سالم العنزي <span>•</span> المتوسطة التاسعة بعرعر</div><div class="cert-seal">✦</div></section><p class="tiny-note print-hide" style="text-align:center;margin-top:18px">شهادة تشجيعية صادرة من المنصة؛ لا تمثّل شهادة اختبار نافس الرسمية.</p></div></div>
+
+  <div id="adminView" class="view" hidden>
+    <div class="container dashboard-shell">
+      <div class="dashboard-title"><div><div class="section-tag">لوحة الإدارة · للمعلمة فقط</div><h2 class="section-title">لوحة المعلمة</h2><p class="section-sub">هديه سالم العنزي · المتوسطة التاسعة بعرعر</p><p class="tiny-note" id="adminSignedUser"></p></div><div class="admin-top-actions"><button type="button" class="btn btn-outline btn-sm" id="adminHome">عرض المنصة</button><button type="button" class="btn btn-light btn-sm" id="adminLogout">تسجيل خروج</button></div></div>
+      <div id="adminError" class="admin-error" role="alert" hidden></div>
+      <div class="dash-stats" id="dashStats"><div class="dash-stat"><span>عدد المحاولات</span><strong id="statAttempts">٠</strong></div><div class="dash-stat"><span>عدد الطالبات (بالاسم)</span><strong id="statStudents">٠</strong></div><div class="dash-stat"><span>متوسط النتيجة</span><strong id="statAverage">٠٪</strong></div><div class="dash-stat"><span>شهادات الشكر</span><strong id="statCertificates">٠</strong></div></div>
+      <div class="platform-controls"><div><strong>إعدادات المنصة</strong><p>تتحكم المعلمة بفتح التحديات وتعرض رسالة إرشادية للطالبات.</p></div><label class="platform-switch"><input id="platformOpen" type="checkbox" checked> السماح للطالبات ببدء التحديات</label><input type="text" id="platformNotice" maxlength="180" placeholder="رسالة اختيارية للطالبات" aria-label="رسالة الطالبات"><button class="btn btn-outline btn-sm" type="button" id="savePlatform">حفظ الإعدادات</button></div><div class="dash-tabs" role="tablist" aria-label="أقسام لوحة المعلمة"><button class="tab-active" id="tabResults" type="button" role="tab" aria-selected="true">نتائج الطالبات والشهادات</button><button id="tabQuestions" type="button" role="tab" aria-selected="false">إدارة بنك الأسئلة</button></div>
+      <section id="adminResultsSection" class="admin-panel" aria-label="النتائج والشهادات">
+        <div class="admin-panel-head"><div><h3>سجل النتائج</h3><p>كل محاولة تُسجل بشكل مستقل، وتقدرين تعرضين شهادة الطالبة أو تنزّلين البيانات.</p></div><button type="button" class="btn btn-outline btn-sm" id="exportResults">تصدير Excel / CSV</button></div>
+        <div class="admin-toolbar"><input type="search" id="resultSearch" placeholder="ابحثي باسم الطالبة..." aria-label="البحث عن طالبة"><select id="resultsDomain" aria-label="تصفية المجال"><option value="allDomains">جميع المجالات</option><option value="all">التحدي الشامل</option><option value="numbers">الأعداد والعمليات</option><option value="algebra">الجبر والدوال</option><option value="geometry">الهندسة والقياس</option><option value="statistics">الإحصاء والاحتمالات</option></select></div>
+        <div class="table-scroll"><table class="data-table"><thead><tr><th>الطالبة</th><th>التحدي</th><th>النتيجة</th><th>التاريخ</th><th>الشهادة</th><th>إدارة</th></tr></thead><tbody id="resultsBody"><tr><td colspan="6" class="table-empty">جاري قراءة النتائج...</td></tr></tbody></table></div>
+      </section>
+      <section id="adminQuestionsSection" class="admin-panel" aria-label="إدارة الأسئلة" hidden>
+        <div class="admin-panel-head"><div><h3>بنك الأسئلة</h3><p>أضيفي أسئلة جديدة أو عدليها أو احذفيها. التغييرات تظهر عند الطالبات تلقائيًا.</p></div><div class="admin-top-actions"><button type="button" class="btn btn-outline btn-sm" id="seedQuestions">اعتماد ٦٠ سؤالًا أساسيًا</button><button type="button" class="btn btn-primary btn-sm" id="addQuestion">+ إضافة سؤال</button></div></div>
+        <div id="questionHelp" class="admin-hint">ابدئي باعتماد الأسئلة الأساسية مرة واحدة، ثم عدليها من هنا. لن يُعاد تحميل الأسئلة المحذوفة تلقائيًا.</div>
+        <div class="admin-toolbar"><input type="search" id="questionSearch" placeholder="بحث في نص السؤال..." aria-label="البحث في الأسئلة"><select id="questionsDomain" aria-label="تصفية الأسئلة"><option value="allDomains">جميع المجالات</option><option value="numbers">الأعداد والعمليات</option><option value="algebra">الجبر والدوال</option><option value="geometry">الهندسة والقياس</option><option value="statistics">الإحصاء والاحتمالات</option></select></div>
+        <div id="questionCount" class="question-count"></div><div id="questionsList" class="managed-questions"></div>
+      </section>
+    </div>
+  </div>
+</main>
+<footer id="siteFooter"><div class="container footer-inner"><span>منصة تفاعلية في الرياضيات · ثالث متوسط</span><span>إشراف المعلمة هديه سالم العنزي · المتوسطة التاسعة بعرعر</span></div></footer>
+<div class="modal-backdrop" id="modalBack" hidden><form class="modal" id="nameForm"><button class="close" type="button" id="modalClose" aria-label="إغلاق">×</button><span class="eyebrow"><i></i> قبل ما نبدأ</span><h2>جاهزة تختبرين مهاراتك؟</h2><p>اكتبي اسمك عشان يظهر في شهادة الشكر بعد إكمال التحدي.</p><label for="studentName">اسم الطالبة</label><input id="studentName" type="text" maxlength="70" autocomplete="name" placeholder="اكتبي اسمك هنا" required><div id="nameError" class="error" aria-live="polite"></div><button class="btn btn-orange" type="submit">يلا نبدأ ←</button><p class="modal-note">في حال تفعيل الربط، تُحفظ نتيجتك وشهادتك في لوحة المعلمة للاطلاع عليها.</p></form></div>
+<script>
+'use strict';
+const domains = [
+ {id:'numbers',name:'الأعداد والعمليات',icon:'⅓',desc:'الجذور والقوى والنسب والعمليات على الأعداد.'},
+ {id:'algebra',name:'الجبر والدوال',icon:'x²',desc:'المعادلات والمتباينات والدوال والأنماط.'},
+ {id:'geometry',name:'الهندسة والقياس',icon:'△',desc:'المساحات والحجوم والمثلثات والزوايا.'},
+ {id:'statistics',name:'الإحصاء والاحتمالات',icon:'▥',desc:'المتوسط والوسيط والبيانات والاحتمالات.'}
+];
+// أسئلة تدريبية أصلية، وليست أسئلة رسمية أو منقولة من اختبارات نافس.
+// q: نص السؤال، a: الخيارات، c: فهرس الإجابة الصحيحة (يبدأ من صفر)، e: التوضيح.
+const bank={
+ numbers:[
+  {q:'ما ناتج ¾ + ½ ؟',a:['١¼','١½','٥⁄٨','١'],c:0,e:'نحوّل ½ إلى ٢⁄٤، ثم ٣⁄٤ + ٢⁄٤ = ٥⁄٤ = ١¼.'},
+  {q:'ما قيمة الجذر التربيعي للعدد ١٤٤؟',a:['١٠','١٢','١٤','٧٢'],c:1,e:'١٢ × ١٢ = ١٤٤، لذلك الجذر التربيعي يساوي ١٢.'},
+  {q:'كم يساوي ٢³ × ٢² ؟',a:['١٦','٣٢','٦٤','١٠'],c:1,e:'عند ضرب قوى لها الأساس نفسه نجمع الأسس: ٢⁵ = ٣٢.'},
+  {q:'ما قيمة ١٥٪ من ٢٠٠؟',a:['١٥','٢٠','٣٠','٤٠'],c:2,e:'١٥٪ = ٠٫١٥، والناتج ٠٫١٥ × ٢٠٠ = ٣٠.'},
+  {q:'إذا كان ثمن كتاب ٨٠ ريالًا، وخُفّض ٢٥٪، فكم ثمنه بعد الخصم؟',a:['٢٠ ريالًا','٥٥ ريالًا','٦٠ ريالًا','٧٥ ريالًا'],c:2,e:'مقدار الخصم ٢٠ ريالًا، والثمن الجديد ٨٠ − ٢٠ = ٦٠.'},
+  {q:'ما ناتج  −٧ + ١٢ ؟',a:['−١٩','−٥','٥','١٩'],c:2,e:'نطرح ٧ من ١٢ لأن الإشارتين مختلفتان، والناتج موجب ٥.'},
+  {q:'أي الأعداد الآتية عدد غير نسبي؟',a:['٠٫٥','√٢','−٤','¾'],c:1,e:'√٢ لا يمكن كتابته على صورة كسر من عددين صحيحين.'},
+  {q:'ما ناتج (−٣)² ؟',a:['−٩','−٦','٦','٩'],c:3,e:'(−٣) × (−٣) = ٩؛ حاصل ضرب عددين سالبين موجب.'},
+  {q:'إذا كانت النسبة بين عددَي الطلاب ٣ : ٥ ومجموعهما ٤٠، فما العدد الأصغر؟',a:['١٢','١٥','٢٠','٢٥'],c:1,e:'مجموع الأجزاء ٨، وقيمة الجزء ٥؛ العدد الأصغر ٣ × ٥ = ١٥.'},
+  {q:'اكتبي العدد ٠٫٠٠٤٥ بالصيغة العلمية.',a:['٤٫٥ × ١٠⁻³','٤٥ × ١٠⁻³','٤٫٥ × ١٠³','٠٫٤٥ × ١٠⁻³'],c:0,e:'ننقل الفاصلة ثلاث خانات إلى اليمين لنحصل على ٤٫٥؛ إذن الأس −٣.'},
+  {q:'ما ناتج ⅔ × ¾ ؟',a:['½','⅜','١½','٧⁄١٢'],c:0,e:'نضرب البسطين والمقامين: ٦⁄١٢ = ½.'},
+  {q:'كم يساوي ٥⁰ عندما يكون الأساس غير صفر؟',a:['٠','١','٥','١٠'],c:1,e:'أي عدد غير صفر مرفوع للأس صفر يساوي ١.'},
+  {q:'إذا كانت ٦ دفاتر بـ ١٨ ريالًا، فما ثمن ١٠ دفاتر بالسعر نفسه؟',a:['٢٤ ريالًا','٢٧ ريالًا','٣٠ ريالًا','٣٦ ريالًا'],c:2,e:'سعر الدفتر ١٨ ÷ ٦ = ٣ ريالات، وثمن ١٠ دفاتر = ٣٠.'},
+  {q:'ما ناتج ٠٫٦ ÷ ٠٫٢ ؟',a:['٠٫٣','١٫٢','٣','٣٠'],c:2,e:'نضرب المقسوم والمقسوم عليه في ١٠؛ ٦ ÷ ٢ = ٣.'},
+  {q:'ما المقلوب الضربي للعدد ⅘ ؟',a:['−⅘','⅘','⁵⁄₄','¼'],c:2,e:'نبدّل البسط والمقام، فيكون المقلوب ٥⁄٤.'}
+ ],
+ algebra:[
+  {q:'حلّي المعادلة: ٣س + ٥ = ٢٠',a:['٣','٤','٥','٦'],c:2,e:'نطرح ٥ من الطرفين فيصبح ٣س = ١٥، إذن س = ٥.'},
+  {q:'إذا كان ص = ٢س + ١، فما قيمة ص عندما س = ٤؟',a:['٧','٨','٩','١٠'],c:2,e:'نعوّض س بـ٤: ص = ٢ × ٤ + ١ = ٩.'},
+  {q:'ما ميل المستقيم المار بالنقطتين (١،٢) و(٣،٦)؟',a:['١','٢','٣','٤'],c:1,e:'الميل = التغير في ص ÷ التغير في س = (٦−٢) ÷ (٣−١) = ٢.'},
+  {q:'حلّي المتباينة: س + ٤ < ١٠',a:['س < ٦','س > ٦','س < ١٤','س > ١٤'],c:0,e:'نطرح ٤ من الطرفين فتصبح س < ٦.'},
+  {q:'ما الحد التالي في المتتابعة: ٣، ٧، ١١، ١٥، ... ؟',a:['١٦','١٨','١٩','٢١'],c:2,e:'الفرق المشترك ٤؛ ١٥ + ٤ = ١٩.'},
+  {q:'ما ناتج تبسيط: ٤س + ٣س − ٢؟',a:['٧س − ٢','٧س + ٢','١٢س − ٢','٥س'],c:0,e:'نجمع الحدود المتشابهة ٤س + ٣س = ٧س.'},
+  {q:'حلّي المعادلة: ٢(س − ٣) = ١٠',a:['٢','٥','٨','١٣'],c:2,e:'نقسم على ٢: س−٣ = ٥، ثم نضيف ٣؛ س = ٨.'},
+  {q:'ما قيمة س في المعادلة: ٥س = ٣٥ ؟',a:['٥','٦','٧','٨'],c:2,e:'نقسم الطرفين على ٥ فنحصل على س = ٧.'},
+  {q:'أي نقطة تقع على المستقيم ص = س + ٢ ؟',a:['(١،٤)','(٢،٤)','(٣،٦)','(٤،٣)'],c:1,e:'عند س = ٢ نجد ص = ٤، فتكون النقطة (٢،٤).'},
+  {q:'ما حل النظام: س + ص = ٧ ، س − ص = ١ ؟',a:['س = ٣ ، ص = ٤','س = ٤ ، ص = ٣','س = ٥ ، ص = ٢','س = ٧ ، ص = ١'],c:1,e:'بجمع المعادلتين: ٢س = ٨، س = ٤، ثم ص = ٣.'},
+  {q:'إذا كانت الدالة ص = −٣س، فما قيمة ص عندما س = −٢؟',a:['−٦','−٥','٥','٦'],c:3,e:'نضرب −٣ × −٢ فنحصل على ٦.'},
+  {q:'ما حل المعادلة: س² = ٤٩ ؟',a:['٧ فقط','−٧ فقط','٧ أو −٧','٤٩ فقط'],c:2,e:'كل من ٧ و−٧ مربعه يساوي ٤٩.'},
+  {q:'ما ناتج (س + ٣)(س + ٢)؟',a:['س² + ٥س + ٦','س² + ٦','س² + س + ٦','س² + ٦س + ٥'],c:0,e:'نستخدم التوزيع: س² + ٢س + ٣س + ٦ = س² + ٥س + ٦.'},
+  {q:'ما المقطع الصادي للمستقيم ص = ٤س − ٣ ؟',a:['٤','−٤','٣','−٣'],c:3,e:'المقطع الصادي هو قيمة ص عندما س = ٠، أي −٣.'},
+  {q:'إذا كان محيط مربع يُعطى بالدالة م = ٤س، فما محيطه عندما س = ٦ سم؟',a:['١٠ سم','١٢ سم','٢٤ سم','٣٦ سم'],c:2,e:'نعوّض في الدالة: م = ٤ × ٦ = ٢٤ سم.'}
+ ],
+ geometry:[
+  {q:'ما مساحة مثلث قاعدته ١٠ سم وارتفاعه ٦ سم؟',a:['١٦ سم²','٣٠ سم²','٦٠ سم²','٣٠ سم³'],c:1,e:'مساحة المثلث = ½ × القاعدة × الارتفاع = ٣٠ سم².'},
+  {q:'مثلث قائم ضلعاه القائمان ٣ سم و٤ سم؛ فما طول الوتر؟',a:['٥ سم','٦ سم','٧ سم','١٢ سم'],c:0,e:'باستخدام فيثاغورس: الوتر² = ٣² + ٤² = ٢٥، فالوتر = ٥.'},
+  {q:'كم مجموع الزوايا الداخلية للمثلث؟',a:['٩٠°','١٨٠°','٢٧٠°','٣٦٠°'],c:1,e:'مجموع زوايا أي مثلث يساوي ١٨٠ درجة.'},
+  {q:'ما محيط مستطيل طوله ٨ سم وعرضه ٥ سم؟',a:['١٣ سم','٢٦ سم','٤٠ سم','٨٠ سم'],c:1,e:'المحيط = ٢ × (٨ + ٥) = ٢٦ سم.'},
+  {q:'دائرة نصف قطرها ٧ سم، فما قطرها؟',a:['٣٫٥ سم','٧ سم','١٤ سم','٤٩ سم'],c:2,e:'القطر = ٢ × نصف القطر = ١٤ سم.'},
+  {q:'ما حجم مكعب طول حرفه ٣ سم؟',a:['٩ سم³','١٨ سم³','٢٧ سم³','٣٦ سم³'],c:2,e:'حجم المكعب = ٣ × ٣ × ٣ = ٢٧ سم³.'},
+  {q:'ما مساحة مستطيل طوله ٩ م وعرضه ٤ م؟',a:['١٣ م²','٢٦ م²','٣٦ م²','٨١ م²'],c:2,e:'المساحة = الطول × العرض = ٩ × ٤ = ٣٦ م².'},
+  {q:'ما قياس الزاوية المكملة لزاوية قياسها ١١٠°؟',a:['٢٠°','٧٠°','١١٠°','٢٥٠°'],c:1,e:'الزاويتان المتكاملتان مجموعهما ١٨٠°؛ ١٨٠ − ١١٠ = ٧٠°.'},
+  {q:'إذا كانت زاويتان متقابلتين بالرأس وإحداهما ٦٥°، فكم الأخرى؟',a:['٢٥°','٦٥°','١١٥°','١٣٠°'],c:1,e:'الزاويتان المتقابلتان بالرأس متساويتان في القياس.'},
+  {q:'ما حجم متوازي مستطيلات أبعاده ٢ سم، ٣ سم، ٥ سم؟',a:['١٠ سم³','٢٠ سم³','٣٠ سم³','٦٠ سم³'],c:2,e:'الحجم = الطول × العرض × الارتفاع = ٢ × ٣ × ٥ = ٣٠ سم³.'},
+  {q:'ما مساحة دائرة نصف قطرها ٣ سم بدلالة π؟',a:['٣π سم²','٦π سم²','٩π سم²','١٢π سم²'],c:2,e:'مساحة الدائرة = π × نق² = ٩π سم².'},
+  {q:'ما قياس كل زاوية داخلية في مربع؟',a:['٤٥°','٦٠°','٩٠°','١٨٠°'],c:2,e:'كل زوايا المربع الأربع قائمة، وقياس كل واحدة ٩٠°.'},
+  {q:'مثلث زواياه ٥٠°، ٦٠°، س؛ فما س؟',a:['٦٠°','٧٠°','٨٠°','٩٠°'],c:1,e:'س = ١٨٠ − (٥٠ + ٦٠) = ٧٠°.'},
+  {q:'إذا كان معامل التكبير بين شكلين متشابهين ٢، وطول ضلع في الأصغر ٤ سم، فما نظيره في الأكبر؟',a:['٢ سم','٦ سم','٨ سم','١٦ سم'],c:2,e:'نضرب ٤ في معامل التكبير ٢؛ الناتج ٨ سم.'},
+  {q:'إذا انتقلت النقطة (٢،٣) ثلاث وحدات إلى اليمين، فما إحداثياتها الجديدة؟',a:['(٥،٣)','(٢،٦)','(−١،٣)','(٣،٥)'],c:0,e:'نزيد الإحداثي السيني بمقدار ٣ ونُبقي الصادي دون تغيير.'}
+ ],
+ statistics:[
+  {q:'ما المتوسط الحسابي للأعداد ٤، ٦، ٨، ١٠ ؟',a:['٦','٧','٨','٩'],c:1,e:'نجمع الأعداد ٢٨ ثم نقسم على عددها ٤؛ المتوسط = ٧.'},
+  {q:'ما الوسيط للبيانات المرتبة: ٢، ٣، ٧، ٩، ١٢ ؟',a:['٣','٧','٩','١٢'],c:1,e:'الوسيط هو العدد الواقع في المنتصف بعد الترتيب، وهو ٧.'},
+  {q:'ما المنوال للبيانات: ٣، ٥، ٥، ٧، ٨ ؟',a:['٣','٥','٧','٨'],c:1,e:'المنوال هو القيمة الأكثر تكرارًا، وهي ٥.'},
+  {q:'عند رمي قطعة نقد عادلة مرة واحدة، ما احتمال ظهور الصورة؟',a:['٠','¼','½','١'],c:2,e:'هناك نتيجتان متساويتان في الاحتمال، إذن الاحتمال ١⁄٢.'},
+  {q:'كم مدى البيانات: ٥، ٩، ١٢، ١٦ ؟',a:['٤','٧','١١','١٦'],c:2,e:'المدى = أكبر قيمة − أصغر قيمة = ١٦ − ٥ = ١١.'},
+  {q:'في كيس ٣ كرات حمراء و٢ زرقاء، ما احتمال سحب كرة زرقاء؟',a:['⅕','⅖','⅗','⅔'],c:1,e:'عدد الكرات الزرقاء ٢ من مجموع ٥، فيكون الاحتمال ٢⁄٥.'},
+  {q:'عند رمي مكعب أرقام عادل من ١ إلى ٦، ما احتمال ظهور عدد زوجي؟',a:['⅙','⅓','½','⅔'],c:2,e:'الأعداد الزوجية ٢، ٤، ٦؛ ثلاثة نواتج من ستة، أي ½.'},
+  {q:'ما المتوسط الحسابي للأعداد ٢، ٤، ٦؟',a:['٣','٤','٥','٦'],c:1,e:'المجموع ١٢، وعدد القيم ٣، لذا المتوسط ٤.'},
+  {q:'ما احتمال اختيار حرف الألف من الأحرف: أ، ب، ج، د بالتساوي؟',a:['¼','⅓','½','¾'],c:0,e:'حالة واحدة مناسبة من أربع حالات متساوية الاحتمال.'},
+  {q:'ما الوسيط للأعداد: ١، ٣، ٥، ٧ ؟',a:['٣','٤','٥','٦'],c:1,e:'لأن عدد القيم زوجي، الوسيط متوسط القيمتين الوسطيتين: (٣+٥) ÷ ٢ = ٤.'},
+  {q:'أُجري استطلاع لعدد ٢٠ طالبة، واختارت ٨ طالبات كرة السلة؛ فما النسبة المئوية؟',a:['٢٠٪','٣٠٪','٤٠٪','٨٠٪'],c:2,e:'٨ ÷ ٢٠ = ٠٫٤ = ٤٠٪.'},
+  {q:'عند رمي مكعب أرقام من ١ إلى ٦، ما احتمال ظهور عدد أكبر من ٤؟',a:['⅙','⅓','½','⅔'],c:1,e:'العددان ٥ و٦ مناسبان؛ الاحتمال ٢⁄٦ = ⅓.'},
+  {q:'ما المنوال للبيانات: ١، ١، ٢، ٢، ٣ ؟',a:['١ فقط','٢ فقط','١ و٢','٣ فقط'],c:2,e:'القيمتان ١ و٢ تظهر كل منهما مرتين؛ البيانات لها منوالان.'},
+  {q:'إذا كانت جميع القيم متساوية وتساوي ٦، فما متوسطها الحسابي؟',a:['٠','٣','٦','١٢'],c:2,e:'متوسط مجموعة من القيم المتساوية يساوي تلك القيمة نفسها.'},
+  {q:'ما الاحتمال التجريبي لحدث وقع ٩ مرات في ٣٠ تجربة؟',a:['١٠٪','٢٠٪','٣٠٪','٩٠٪'],c:2,e:'الاحتمال التجريبي = ٩ ÷ ٣٠ = ٠٫٣ = ٣٠٪.'}
+ ]
+};
+const $=s=>document.querySelector(s), $$=s=>Array.from(document.querySelectorAll(s));
+const arabicDigits=s=>String(s).replace(/[0-9]/g,d=>'٠١٢٣٤٥٦٧٨٩'[Number(d)]);
+const storageKey='nafes-math-g9-v1';
+let saved={name:'',best:{},last:null};try{const x=JSON.parse(localStorage.getItem(storageKey));if(x&&typeof x==='object')saved={...saved,...x,best:x.best||{}}}catch(_){/* Private mode */}
+const state={domain:null,questions:[],index:0,selected:null,checked:false,score:0,name:'',last:null};
+const getDomain=id=>domains.find(d=>d.id===id);
+function persist(){try{localStorage.setItem(storageKey,JSON.stringify(saved))}catch(_){}}
+function scrollTop(){window.scrollTo({top:0,behavior:'instant'})}
+function showView(id){for(const v of ['homeView','quizView','resultView','certificateView','adminView'])$('#'+v).hidden=v!==id;scrollTop();}
+function goHome(target){showView('homeView');if(target){setTimeout(()=>$('#'+target)?.scrollIntoView({behavior:'smooth',block:'start'}),70)}}
+function renderDomains(){const grid=$('#domainGrid');grid.innerHTML='';domains.forEach((d,i)=>{const btn=document.createElement('button');btn.className='domain';btn.type='button';btn.setAttribute('aria-label','بدء تدريب '+d.name);const best=saved.best[d.id];const activeCount=typeof effectiveQuestions==='function'?effectiveQuestions(d.id).length:bank[d.id].length;btn.disabled=activeCount===0;btn.innerHTML=`<span class="domain-icon">${d.icon}</span><h3>${d.name}</h3><p>${d.desc}</p><div class="domain-foot"><span>ابدئي التدريب ←</span><span class="domain-score">${best!==undefined?'أفضل نتيجة '+arabicDigits(best)+'٪':arabicDigits(Math.min(activeCount,12))+' سؤالًا'}</span></div>`;btn.addEventListener('click',()=>askName(d.id));grid.appendChild(btn)})}
+function askName(domainId){if(typeof canStartChallenge==='function'&&!canStartChallenge())return;state.domain=domainId;$('#modalBack').hidden=false;$('#studentName').value=saved.name||'';$('#nameError').textContent='';$('#studentName').focus();document.body.style.overflow='hidden'}
+function closeModal(){$('#modalBack').hidden=true;document.body.style.overflow=''}
+function shuffle(items){const copy=[...items];for(let i=copy.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[copy[i],copy[j]]=[copy[j],copy[i]]}return copy}
+function startQuiz(){const id=state.domain;state.name=saved.name;const all=domains.flatMap(d=>effectiveQuestions(d.id));state.questions=id==='all'?shuffle(domains.flatMap(d=>shuffle(effectiveQuestions(d.id)).slice(0,5))):shuffle(effectiveQuestions(id)).slice(0,12);if(!state.questions.length){alert('لا توجد أسئلة متاحة لهذا المسار الآن.');goHome('domains');return;}state.index=0;state.selected=null;state.checked=false;state.score=0;$('#quizHeading').textContent=id==='all'?'التحدي الشامل':getDomain(id).name;$('#quizBreadcrumb').textContent=id==='all'?'التحدي الشامل':getDomain(id).name;$('#quizSub').textContent=`${arabicDigits(state.questions.length)} سؤالًا · التصحيح بعد كل إجابة · بالتوفيق يا ${state.name}`;showView('quizView');renderQuestion()}
+function renderQuestion(){const q=state.questions[state.index],total=state.questions.length;state.selected=null;state.checked=false;$('#quizDomainBadge').textContent=getDomain(q.domain).name;$('#quizCounter').textContent=`السؤال ${arabicDigits(state.index+1)} من ${arabicDigits(total)}`;$('#progressInner').style.width=(state.index/total*100)+'%';$('#progressTrack').setAttribute('aria-valuenow',String(Math.round(state.index/total*100)));$('#questionText').textContent=q.q;$('#feedback').hidden=true;$('#nextBtn').textContent='تحققي من الإجابة ←';$('#nextBtn').disabled=true;$('#quizNameSide').textContent='المتدرّبة: '+state.name;$('#quizLiveScore').textContent='النقاط: '+arabicDigits(state.score);const el=$('#answers');el.innerHTML='';q.a.forEach((ans,i)=>{const b=document.createElement('button');b.type='button';b.className='answer';b.innerHTML=`<span class="answer-dot">${arabicDigits(i+1)}</span><span></span>`;b.children[1].textContent=ans;b.addEventListener('click',()=>choose(i));el.appendChild(b)})}
+function choose(index){if(state.checked)return;state.selected=index;$$('.answer').forEach((e,i)=>e.classList.toggle('chosen',i===index));$('#nextBtn').disabled=false}
+function checkAnswer(){const q=state.questions[state.index];if(state.selected===null)return;state.checked=true;const good=state.selected===q.c;if(good)state.score++;$$('.answer').forEach((e,i)=>{e.disabled=true;e.classList.remove('chosen');if(i===q.c)e.classList.add('correct');else if(i===state.selected&&!good)e.classList.add('wrong')});const feedback=$('#feedback');feedback.hidden=false;feedback.classList.toggle('bad',!good);$('#feedbackHead').textContent=good?'إجابة صحيحة! ممتاز ✦':'مو هذي الإجابة، شوفي التوضيح';$('#feedbackBody').textContent=q.e;$('#quizLiveScore').textContent='النقاط: '+arabicDigits(state.score);$('#nextBtn').textContent=state.index===state.questions.length-1?'إنهاء وعرض نتيجتي ←':'السؤال التالي ←'}
+function nextQuestion(){if(!state.checked){checkAnswer();return}state.index++;if(state.index>=state.questions.length)finishQuiz();else{renderQuestion();$('.quiz-card').scrollIntoView({behavior:'smooth',block:'start'})}}
+function finishQuiz(){const total=state.questions.length,percent=Math.round(state.score/total*100);state.last={name:state.name,domain:state.domain,score:state.score,total,percent,date:new Date().toISOString(),certificate:true,questionIds:state.questions.map(q=>String(q.id||''))};certificateSelection=null;certificateBackView='resultView';saved.last=state.last;saved.best[state.domain]=Math.max(percent,saved.best[state.domain]??0);persist();renderDomains();const name=state.name.split(' ')[0];$('#resultTitle').textContent=percent>=90?`مبدعة يا ${name}!`:(percent>=60?`أحسنتِ يا ${name}!`:`شكراً لمثابرتك يا ${name}!`);$('#resultText').textContent=percent>=90?'نتيجتك رائعة، وتستحقين كل التقدير.':percent>=60?'مستوى جميل! مع التدريب تزيد ثقتك ومهارتك.':'كمّلي التدرّب، فالتقدّم يبدأ بالمحاولة.';$('#resultPercent').textContent=arabicDigits(percent);$('#resultCount').textContent=`${arabicDigits(state.score)} من ${arabicDigits(total)}`;$('#resultDomain').textContent=state.domain==='all'?'التحدي الشامل':getDomain(state.domain).name;$('#resultInsight').textContent=percent===100?'كل الإجابات صحيحة، إنجاز قوي فعلًا!':percent>=70?'راجعي السؤال اللي أخطأتِ فيه؛ فهم السبب يحسّن نتيجتك بسرعة.':'خذي جولة ثانية بعد مراجعة التوضيحات، مو شرط تكون المحاولة الأولى مثالية.';showView('resultView');if(typeof syncResult==='function')syncResult(state.last)}
+const certDate=d=>new Intl.DateTimeFormat('ar-SA-u-ca-gregory',{year:'numeric',month:'long',day:'numeric'}).format(new Date(d));
+function showCertificate(){const r=certificateSelection||state.last||saved.last;if(!r)return;$('#certificateName').textContent=r.name;$('#certificateKind').textContent=r.domain==='all'?'التحدي الشامل في الرياضيات':'تدريب '+getDomain(r.domain).name;$('#certificateScore').textContent='النتيجة: '+arabicDigits(r.percent)+'٪';$('#certificateDate').textContent=certDate(r.date);showView('certificateView')}
+function downloadImage(){const r=certificateSelection||state.last||saved.last;if(!r)return;const c=document.createElement('canvas');c.width=1600;c.height=1132;const x=c.getContext('2d');x.fillStyle='#fffdf9';x.fillRect(0,0,1600,1132);x.lineWidth=25;x.strokeStyle='#203e44';x.strokeRect(13,13,1574,1106);x.lineWidth=3;x.strokeStyle='#d8b977';x.strokeRect(46,46,1508,1040);x.lineWidth=1;x.strokeStyle='#d5ddd5';x.strokeRect(62,62,1476,1008);x.fillStyle='#e4f0e8';x.beginPath();x.ellipse(1555,65,165,160,.3,0,Math.PI*2);x.fill();x.fillStyle='#fae9da';x.beginPath();x.ellipse(15,1060,165,155,1,0,Math.PI*2);x.fill();x.textAlign='center';x.direction='rtl';const font=(weight,size)=>`${weight} ${size}px Tajawal, Tahoma, Arial, sans-serif`;x.fillStyle='#6c887e';x.font=font(800,31);x.fillText('منصة تفاعلية في الرياضيات • رياضيات',800,195);x.fillStyle='#d6a557';x.font=font(800,68);x.fillText('✦ ✧ ✦',800,281);x.fillStyle='#203e44';x.font=font(900,88);x.fillText('شهادة شكر وتقدير',800,405);x.fillStyle='#647b77';x.font=font(600,37);x.fillText('تُمنح بكل فخر للطالبة المجتهدة',800,485);const name=r.name.length>31?r.name.slice(0,31)+'…':r.name;x.font=font(900,name.length>20?61:76);x.fillStyle='#c77b48';x.fillText(name,800,600);x.strokeStyle='#d3b88a';x.lineWidth=4;x.beginPath();x.moveTo(410,626);x.lineTo(1190,626);x.stroke();x.fillStyle='#37505a';x.font=font(600,34);x.fillText('تقديرًا لمشاركتها وإتمامها',800,703);x.font=font(800,37);const label=r.domain==='all'?'التحدي الشامل في الرياضيات':'تدريب '+getDomain(r.domain).name;x.fillText(label,800,759);x.font=font(600,30);x.fillText('للصف الثالث المتوسط، وإظهارها روح المثابرة والتعلّم.',800,812);x.fillStyle='#70837f';x.font=font(700,31);x.fillText('النتيجة: '+arabicDigits(r.percent)+'٪        ✦        '+certDate(r.date),800,901);x.fillStyle='#546f68';x.font=font(600,25);x.fillText('المعلمة: هديه سالم العنزي • المتوسطة التاسعة بعرعر',800,949);x.strokeStyle='#cfab66';x.lineWidth=6;x.beginPath();x.arc(800,1000,48,0,2*Math.PI);x.stroke();x.fillStyle='#af8b4d';x.font=font(900,50);x.fillText('✦',800,1017);const link=document.createElement('a');link.download='شهادة-شكر-التميز-'+r.name.replace(/[^\u0600-\u06ffa-zA-Z0-9 _-]/g,'').trim()+'.png';link.href=c.toDataURL('image/png');link.click()}
+$('#nameForm').addEventListener('submit',e=>{e.preventDefault();const v=$('#studentName').value.trim().replace(/\s+/g,' ');if(v.length<2){$('#nameError').textContent='اكتبي اسمًا من حرفين على الأقل.';return}saved.name=v;persist();closeModal();startQuiz()});
+$('#modalClose').addEventListener('click',closeModal);$('#modalBack').addEventListener('click',e=>{if(e.target===$('#modalBack'))closeModal()});
+$('#nextBtn').addEventListener('click',nextQuestion);
+for(const id of ['quickStart','heroStart','allStart','aboutStart'])$('#'+id).addEventListener('click',()=>askName('all'));
+$$('[data-home]').forEach(b=>b.addEventListener('click',()=>goHome()));$$('[data-domains]').forEach(b=>b.addEventListener('click',()=>goHome('domains')));$$('[data-about]').forEach(b=>b.addEventListener('click',()=>goHome('about')));$('#homeLogo').addEventListener('click',e=>{e.preventDefault();goHome()});
+$('#goCert').addEventListener('click',showCertificate);$('#retry').addEventListener('click',()=>askName(state.domain));$('#backToResult').addEventListener('click',()=>showView(certificateBackView));$('#printCert').addEventListener('click',()=>window.print());$('#saveImage').addEventListener('click',downloadImage);
+window.addEventListener('keydown',e=>{if(!$('#modalBack').hidden){if(e.key==='Escape')closeModal();return}if(!$('#quizView').hidden){if(!state.checked&&['1','2','3','4'].includes(e.key))choose(Number(e.key)-1);if(e.key==='Enter'&&!$('#nextBtn').disabled&&e.target.tagName!=='BUTTON')nextQuestion()}});
+renderDomains();
+</script>
+<div id="teacherLoginBack" class="modal-backdrop" hidden><form class="modal teacher-login-modal" id="teacherLoginForm"><button type="button" class="close" id="teacherLoginClose" aria-label="إغلاق">×</button><span class="eyebrow"><i></i> دخول المعلمة</span><h2>لوحة المعلمة</h2><p>النتائج وإدارة الأسئلة متاحة لصاحبة الحساب المعتمد فقط.</p><label for="teacherEmail">البريد الإلكتروني</label><input type="email" id="teacherEmail" value="t97689140@nthg.moe.gov.sa" readonly><label for="teacherPassword">كلمة مرور حساب المعلمة على Firebase</label><input id="teacherPassword" type="password" minlength="6" autocomplete="current-password" required placeholder="••••••••"><div id="teacherLoginError" class="error" role="alert"></div><button type="submit" class="btn btn-primary" id="teacherLoginSubmit">دخول لوحة المعلمة</button><p class="modal-note" id="teacherLoginHint">يجب أولًا إعداد حساب المعلمة وربط Firebase حسب ملف التعليمات.</p></form></div>
+<div id="questionModal" class="modal-backdrop" hidden><form id="questionForm" class="modal question-modal"><button type="button" class="close" id="questionClose" aria-label="إغلاق">×</button><h2 id="questionModalTitle">إضافة سؤال جديد</h2><input type="hidden" id="editQuestionId"><label for="editDomain">المجال</label><select id="editDomain" required><option value="numbers">الأعداد والعمليات</option><option value="algebra">الجبر والدوال</option><option value="geometry">الهندسة والقياس</option><option value="statistics">الإحصاء والاحتمالات</option></select><label for="editPrompt">نص السؤال</label><textarea id="editPrompt" rows="3" required minlength="5" maxlength="500" placeholder="اكتبي السؤال"></textarea><div class="option-grid"><label>الخيار الأول<input id="opt0" maxlength="180" required></label><label>الخيار الثاني<input id="opt1" maxlength="180" required></label><label>الخيار الثالث<input id="opt2" maxlength="180" required></label><label>الخيار الرابع<input id="opt3" maxlength="180" required></label></div><label class="publish-check"><input type="checkbox" id="editPublished" checked> السؤال منشور للطالبات</label><label for="editCorrect">الإجابة الصحيحة</label><select id="editCorrect" required><option value="0">الخيار الأول</option><option value="1">الخيار الثاني</option><option value="2">الخيار الثالث</option><option value="3">الخيار الرابع</option></select><label for="editExplanation">التوضيح بعد الإجابة</label><textarea id="editExplanation" rows="2" maxlength="700" required placeholder="اشرحي طريقة الحل باختصار"></textarea><div class="error" id="editQuestionError" role="alert"></div><div class="editor-actions"><button type="submit" class="btn btn-primary" id="saveQuestion">حفظ السؤال</button><button type="button" class="btn btn-outline" id="cancelQuestion">إلغاء</button></div></form></div>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+<script>
+// إعدادات تطبيق Firebase Web العامة — لا تتضمن كلمة مرور أو مفتاح خدمة خاص.
+window.FIREBASE_CONFIG = {
+  apiKey: "AIzaSyBACJC9iF31w4XHKcEJBtBxGwcOCLuImro",
+  authDomain: "haya-nafis-math.firebaseapp.com",
+  projectId: "haya-nafis-math",
+  storageBucket: "haya-nafis-math.firebasestorage.app",
+  messagingSenderId: "794262456475",
+  appId: "1:794262456475:web:73a8a0ef661e488df51e3e",
+  measurementId: "G-8GKTVHZ52M"
+};
+
+</script>
+<script>
+'use strict';
+// لوحة المعلمة: Firestore/Auth. لا تحفظ كلمات المرور أو مفاتيح الإدارة في المتصفح.
+const TEACHER_EMAIL = 't97689140@nthg.moe.gov.sa';
+let certificateSelection = null;
+let certificateBackView = 'resultView';
+let cloudQuestions = [];
+let cloudSettings = {open:true, notice:'', bankInitialized:false};
+let signedTeacher = null;
+let db = null;
+let auth = null;
+let cloudReady = false;
+let initialSettingsLoaded = false;
+let initialQuestionsLoaded = false;
+let cloudResults = [];
+let teacherUnsubscribe = null;
+const cloudListeners = [];
+const config = window.FIREBASE_CONFIG || {};
+const hasConfig = Boolean(config.apiKey && config.projectId && config.authDomain && config.appId);
+const escapeText = v => String(v??'');
+const safeDate = d => {try{return certDate(d)}catch(_){return '—'}};
+const cleanString = (v,max=180) => String(v??'').trim().replace(/\s+/g,' ').slice(0,max);
+const uid = () => 'custom-' + (globalThis.crypto?.randomUUID?.() || Date.now()+'-'+Math.random().toString(36).slice(2));
+function reportBanner(message, error=false){
+  const node=$('#connectionBanner');
+  node.hidden=!message;
+  if(message){node.textContent=message;node.style.background=error?'#fff0ec':'#fff5e5';node.style.color=error?'#8f403b':'#745132';}
+}
+function showAdminError(message){const e=$('#adminError');e.hidden=!message;e.textContent=message||'';}
+function effectiveQuestions(domain){
+  if(cloudReady && cloudSettings.bankInitialized){
+    return cloudQuestions.filter(q=>q.domain===domain && q.published).map(q=>({id:q.id,domain:q.domain,q:q.q,a:q.a,c:q.c,e:q.e}));
+  }
+  return (bank[domain]||[]).map((q,i)=>({...q,id:'base-'+domain+'-'+String(i+1).padStart(2,'0'),domain}));
+}
+function canStartChallenge(){
+  if(cloudReady && initialSettingsLoaded && !cloudSettings.open){alert('التحديات مغلقة حاليًا من قِبل المعلمة.');return false}
+  if(cloudReady && (!initialSettingsLoaded || !initialQuestionsLoaded)){alert('يجري تحميل محتوى المنصة، أعيدي المحاولة بعد قليل.');return false}
+  return true;
+}
+async function syncResult(r){
+  const status=$('#resultSyncStatus');
+  if(!cloudReady){status.textContent='تم حفظ النتيجة على هذا الجهاز فقط. لتصل للمعلمة، يجب تفعيل قاعدة البيانات في المنصة.';status.className='sync-status sync-error';return}
+  status.textContent='يجري إرسال نتيجتك للمعلمة...';status.className='sync-status';
+  try{
+    await db.collection('results').add({
+      name:cleanString(r.name,80),domain:r.domain,score:Number(r.score),total:Number(r.total),
+      percent:Number(r.percent),date:r.date,certificate:true,
+      createdAt:firebase.firestore.FieldValue.serverTimestamp()
+    });
+    status.textContent='✓ وصلت نتيجتك للمعلمة، وشهادتك جاهزة.';
+    status.className='sync-status';
+  }catch(err){
+    console.error('Could not save student result',err);
+    status.textContent='تعذّر إرسال النتيجة. احتفظي بالشهادة وتواصلي مع المعلمة؛ النتيجة محفوظة على جهازك فقط.';
+    status.className='sync-status sync-error';
+  }
+}
+function showTeacherLogin(){
+  if(!cloudReady){alert('لوحة المعلمة تحتاج إعداد Firebase أولًا. افتحي ملف تعليمات-التفعيل المرفق مع المنصة.');return}
+  if(signedTeacher){showView('adminView');return}
+  $('#teacherLoginError').textContent='';
+  $('#teacherPassword').value='';
+  $('#teacherLoginBack').hidden=false;
+  $('#teacherPassword').focus();
+  document.body.style.overflow='hidden';
+}
+function closeTeacherLogin(){$('#teacherLoginBack').hidden=true;document.body.style.overflow=''}
+function closeQuestionForm(){$('#questionModal').hidden=true;document.body.style.overflow=''}
+function requireTeacher(){return Boolean(signedTeacher && signedTeacher.email?.toLowerCase()===TEACHER_EMAIL)}
+function showTeacherScreen(){
+  if(!requireTeacher())return;
+  $('#adminSignedUser').textContent='دخول آمن: '+signedTeacher.email;
+  $('#teacherPassword').value='';closeTeacherLogin();showView('adminView');
+  activateResultsListener();renderDashboard();
+}
+function activateResultsListener(){
+  if(teacherUnsubscribe)return;
+  teacherUnsubscribe=db.collection('results').onSnapshot(snap=>{
+    cloudResults=snap.docs.map(x=>({id:x.id,...x.data()}));
+    cloudResults.sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')));
+    renderDashboard();
+  },e=>showAdminError('تعذّر تحميل النتائج: تأكدي من تفعيل قواعد الحماية وربط رقم UID الصحيح للمعلمة.'));
+}
+function stopResultsListener(){if(teacherUnsubscribe){teacherUnsubscribe();teacherUnsubscribe=null}cloudResults=[]}
+function renderDashboard(){
+  if(!requireTeacher())return;
+  $('#statAttempts').textContent=arabicDigits(cloudResults.length);
+  $('#statStudents').textContent=arabicDigits(new Set(cloudResults.map(r=>cleanString(r.name,80))).size);
+  $('#statAverage').textContent=arabicDigits(cloudResults.length?Math.round(cloudResults.reduce((s,r)=>s+(Number(r.percent)||0),0)/cloudResults.length):0)+'٪';
+  $('#statCertificates').textContent=arabicDigits(cloudResults.filter(r=>r.certificate).length);
+  $('#platformOpen').checked=cloudSettings.open!==false;
+  if(document.activeElement!==$('#platformNotice'))$('#platformNotice').value=cloudSettings.notice||'';
+  renderResults();renderAdminQuestions();
+}
+function nameOfDomain(id){return id==='all'?'التحدي الشامل':getDomain(id)?.name||id}
+function el(tag, txt, className){const n=document.createElement(tag);if(txt!==undefined)n.textContent=String(txt);if(className)n.className=className;return n}
+function makeMiniButton(label, action, danger=false){const b=el('button',label,'mini-btn'+(danger?' danger':''));b.type='button';b.addEventListener('click',action);return b}
+function renderResults(){
+  const tbody=$('#resultsBody');tbody.replaceChildren();
+  const text=$('#resultSearch').value.trim().toLowerCase();
+  const domain=$('#resultsDomain').value;
+  const filtered=cloudResults.filter(r=>String(r.name).toLowerCase().includes(text) && (domain==='allDomains'||domain===r.domain));
+  if(!filtered.length){const row=el('tr');const cell=el('td','لا توجد نتائج مطابقة حاليًا.','table-empty');cell.colSpan=6;row.append(cell);tbody.append(row);return}
+  filtered.forEach(r=>{
+    const row=el('tr');
+    const date= r.createdAt?.toDate?.()?.toISOString?.() || r.date;
+    for(const value of [r.name,nameOfDomain(r.domain),`${arabicDigits(r.score)} / ${arabicDigits(r.total)} (${arabicDigits(r.percent)}٪)`,safeDate(date)]) row.append(el('td',value));
+    const certCell=el('td');certCell.append(makeMiniButton('عرض الشهادة',()=>{
+      certificateSelection={...r,date:date||new Date().toISOString()};certificateBackView='adminView';showCertificate();
+    }));row.append(certCell);
+    const actionCell=el('td');actionCell.append(makeMiniButton('حذف النتيجة',()=>deleteResult(r),true));row.append(actionCell);
+    tbody.append(row);
+  })
+}
+async function deleteResult(r){
+  if(!requireTeacher()||!confirm(`هل أنتِ متأكدة من حذف نتيجة الطالبة ${r.name}؟`))return;
+  try{await db.collection('results').doc(r.id).delete()}catch(e){showAdminError('تعذّر حذف النتيجة. تأكدي من الصلاحيات.')}}
+function renderAdminQuestions(){
+  const list=$('#questionsList');list.replaceChildren();
+  const domain=$('#questionsDomain').value;
+  const search=$('#questionSearch').value.trim().toLowerCase();
+  const matches=cloudQuestions.filter(q=>(domain==='allDomains'||q.domain===domain) && q.q.toLowerCase().includes(search));
+  $('#questionCount').textContent=`${arabicDigits(matches.length)} سؤالًا مطابقًا • ${arabicDigits(cloudQuestions.length)} محفوظًا في قاعدة البيانات`;
+  if(!cloudSettings.bankInitialized){$('#questionHelp').textContent='ابدئي بتحميل بنك الأسئلة الأساسي إلى Firebase مرة واحدة، ثم أضيفي أو عدّلي أو احذفي الأسئلة. يمكن إضافة سؤال قبل ذلك أيضًا.'}
+  else {$('#questionHelp').textContent='أي تعديل على الأسئلة المنشورة يظهر عند الطالبات عند بدء التحدي التالي. الأسئلة المحذوفة لا تعود تلقائيًا.'}
+  if(!matches.length){list.append(el('p','ما فيه أسئلة مطابقة. أضيفي سؤال جديد أو اعتمدي الأسئلة الأساسية.','tiny-note'));return}
+  matches.forEach(q=>{
+    const card=el('article',undefined,'managed-q');
+    card.append(el('div',nameOfDomain(q.domain)+(q.published?' · منشور':' · مخفي'),'q-category'));
+    card.append(el('h4',q.q));
+    card.append(el('p','الإجابة الصحيحة: '+q.a[q.c],'correct-choice'));
+    const actions=el('div',undefined,'managed-q-actions');
+    actions.append(makeMiniButton('تعديل',()=>editQuestion(q)));
+    actions.append(makeMiniButton(q.published?'إخفاء':'نشر',()=>toggleQuestion(q)));
+    actions.append(makeMiniButton('حذف',()=>deleteQuestion(q),true));
+    card.append(actions);list.append(card);
+  });
+}
+async function toggleQuestion(q){if(!requireTeacher())return;try{await db.collection('questions').doc(q.id).update({published:!q.published,updatedAt:firebase.firestore.FieldValue.serverTimestamp()})}catch(e){showAdminError('تعذّر تحديث السؤال.')}}
+async function deleteQuestion(q){if(!requireTeacher()||!confirm('هل تريدين حذف هذا السؤال نهائيًا؟'))return;try{await db.collection('questions').doc(q.id).delete()}catch(e){showAdminError('تعذّر حذف السؤال.')}}
+function editQuestion(q=null){
+  if(!requireTeacher())return;
+  $('#questionForm').reset();$('#editQuestionError').textContent='';
+  $('#questionModalTitle').textContent=q?'تعديل السؤال':'إضافة سؤال جديد';
+  $('#editQuestionId').value=q?.id||'';
+  $('#editDomain').value=q?.domain||'numbers';
+  $('#editPrompt').value=q?.q||'';
+  for(let i=0;i<4;i++)$('#opt'+i).value=q?.a?.[i]||'';
+  $('#editCorrect').value=String(q?.c||0);
+  $('#editExplanation').value=q?.e||'';
+  $('#editPublished').checked=q?.published!==false;
+  $('#questionModal').hidden=false;$('#editPrompt').focus();document.body.style.overflow='hidden';
+}
+async function saveQuestion(e){
+  e.preventDefault();if(!requireTeacher())return;
+  const id=$('#editQuestionId').value;
+  const value={
+    domain:$('#editDomain').value,q:$('#editPrompt').value.trim(),
+    a:[0,1,2,3].map(i=>$('#opt'+i).value.trim()),c:Number($('#editCorrect').value),
+    e:$('#editExplanation').value.trim(),published:$('#editPublished').checked,
+    updatedAt:firebase.firestore.FieldValue.serverTimestamp()
+  };
+  if(value.q.length<5||value.a.some(x=>!x)||value.e.length<3){$('#editQuestionError').textContent='اكتبي السؤال وأربع خيارات وتوضيحًا للإجابة.';return}
+  try{
+    if(id){await db.collection('questions').doc(id).update(value)}
+    else {value.createdAt=firebase.firestore.FieldValue.serverTimestamp();await db.collection('questions').add(value)}
+    if(!cloudSettings.bankInitialized)await db.collection('settings').doc('main').set({bankInitialized:true},{merge:true});
+    closeQuestionForm();
+  }catch(err){console.error(err);$('#editQuestionError').textContent='تعذّر حفظ السؤال. تأكدي من إعداد Firebase والصلاحيات.'}
+}
+async function seedQuestions(){
+  if(!requireTeacher()||!confirm('سيُضاف بنك الـ٦٠ سؤالًا الأساسي. الأسئلة الموجودة بنفس المعرّفات لن تُستبدل. هل نكمل؟'))return;
+  const btn=$('#seedQuestions');btn.disabled=true;btn.textContent='يجري الاعتماد...';
+  try{
+    const refs=[];
+    for(const domain of domains)for(let i=0;i<bank[domain.id].length;i++)refs.push({domain:domain.id,index:i,q:bank[domain.id][i]});
+    const snap=await db.collection('questions').get();
+    const existing=new Set(snap.docs.map(x=>x.id));
+    const batch=db.batch();let added=0;
+    for(const r of refs){const id='base-'+r.domain+'-'+String(r.index+1).padStart(2,'0');if(existing.has(id))continue;
+      batch.set(db.collection('questions').doc(id),{domain:r.domain,...r.q,published:true,createdAt:firebase.firestore.FieldValue.serverTimestamp(),updatedAt:firebase.firestore.FieldValue.serverTimestamp()});added++}
+    if(added)await batch.commit();
+    await db.collection('settings').doc('main').set({bankInitialized:true},{merge:true});
+    alert(`تم اعتماد ${arabicDigits(added)} سؤالًا جديدًا.`);
+  }catch(err){console.error(err);showAdminError('تعذّر اعتماد الأسئلة. راجعي صلاحيات قاعدة البيانات.')}finally{btn.disabled=false;btn.textContent='اعتماد ٦٠ سؤالًا أساسيًا'}
+}
+function csvSafe(v){
+  let s=String(v??'').replace(/\r?\n/g,' ');
+  if(/^[\s\t]*[=+@\-]/.test(s))s="'"+s;
+  return '"'+s.replace(/"/g,'""')+'"';
+}
+function exportResults(){
+  if(!requireTeacher())return;
+  const rows=[['الطالبة','التحدي','الصحيحة','إجمالي الأسئلة','النسبة','التاريخ','شهادة الشكر'],...cloudResults.map(r=>[
+    r.name,nameOfDomain(r.domain),r.score,r.total,r.percent,r.date,r.certificate?'نعم':'لا'
+  ])];
+  const blob=new Blob(['\uFEFF'+rows.map(row=>row.map(csvSafe).join(',')).join('\r\n')],{type:'text/csv;charset=utf-8'});
+  const link=document.createElement('a');const url=URL.createObjectURL(blob);link.href=url;link.download='نتائج-طالبات-التميز-'+new Date().toISOString().slice(0,10)+'.csv';link.click();setTimeout(()=>URL.revokeObjectURL(url),3000);
+}
+async function saveSettings(){
+  if(!requireTeacher())return;
+  const button=$('#savePlatform');button.disabled=true;
+  try{await db.collection('settings').doc('main').set({open:$('#platformOpen').checked,notice:cleanString($('#platformNotice').value,180)},{merge:true});showAdminError('');alert('تم حفظ إعدادات المنصة.')}catch(err){showAdminError('تعذّر حفظ إعدادات المنصة. تحققي من الصلاحيات.')}finally{button.disabled=false}
+}
+function showPublicSettings(){
+  const notice=$('#publicNotice');notice.hidden=!cloudSettings.notice;
+  notice.textContent=cloudSettings.notice||'';
+  notice.style.cssText='background:#e8f0e9;padding:13px 16px;border-radius:12px;font-weight:800;color:#345d56;margin-top:16px';
+  renderDomains();
+}
+function setTab(name){
+  const questions=name==='questions';
+  $('#adminResultsSection').hidden=questions;$('#adminQuestionsSection').hidden=!questions;
+  $('#tabResults').classList.toggle('tab-active',!questions);
+  $('#tabQuestions').classList.toggle('tab-active',questions);
+  $('#tabResults').setAttribute('aria-selected',String(!questions));
+  $('#tabQuestions').setAttribute('aria-selected',String(questions));
+}
+// Events
+$('#teacherEntry').addEventListener('click',showTeacherLogin);
+$('#teacherLoginClose').addEventListener('click',closeTeacherLogin);
+$('#teacherLoginBack').addEventListener('click',e=>{if(e.target===$('#teacherLoginBack'))closeTeacherLogin()});
+$('#teacherLoginForm').addEventListener('submit',async e=>{
+  e.preventDefault();if(!cloudReady)return;
+  const btn=$('#teacherLoginSubmit');btn.disabled=true;
+  $('#teacherLoginError').textContent='';
+  try{
+    const result=await auth.signInWithEmailAndPassword(TEACHER_EMAIL,$('#teacherPassword').value);
+    if(result.user.email?.toLowerCase()!==TEACHER_EMAIL){await auth.signOut();throw new Error('الحساب غير مصرح له بالدخول')}
+    signedTeacher=result.user;showTeacherScreen();
+  }catch(err){console.error('Teacher sign-in error',err);$('#teacherLoginError').textContent='فشل الدخول. تأكدي من كلمة المرور وتفعيل الحساب المعتمد وقواعد الحماية.'}
+  finally{btn.disabled=false}
+});
+$('#adminHome').addEventListener('click',()=>goHome());
+$('#adminLogout').addEventListener('click',async()=>{if(auth)await auth.signOut();stopResultsListener();signedTeacher=null;goHome()});
+$('#tabResults').addEventListener('click',()=>setTab('results'));
+$('#tabQuestions').addEventListener('click',()=>setTab('questions'));
+$('#resultSearch').addEventListener('input',renderResults);
+$('#resultsDomain').addEventListener('change',renderResults);
+$('#questionSearch').addEventListener('input',renderAdminQuestions);
+$('#questionsDomain').addEventListener('change',renderAdminQuestions);
+$('#exportResults').addEventListener('click',exportResults);
+$('#savePlatform').addEventListener('click',saveSettings);
+$('#seedQuestions').addEventListener('click',seedQuestions);
+$('#addQuestion').addEventListener('click',()=>editQuestion());
+$('#questionForm').addEventListener('submit',saveQuestion);
+$('#questionClose').addEventListener('click',closeQuestionForm);
+$('#cancelQuestion').addEventListener('click',closeQuestionForm);
+$('#questionModal').addEventListener('click',e=>{if(e.target===$('#questionModal'))closeQuestionForm()});
+window.addEventListener('keydown',e=>{if(e.key==='Escape'){if(!$('#questionModal').hidden)closeQuestionForm();else if(!$('#teacherLoginBack').hidden)closeTeacherLogin()}});
+
+// Cloud setup: configured only when owner supplies a Firebase app configuration.
+if(!hasConfig){
+  reportBanner('نسخة التجربة: الموقع يعمل بالأسئلة المدمجة، لكن النتائج لا تصل إلى لوحة المعلمة حتى يتم ربط Firebase. اتبعي تعليمات التفعيل المرفقة.');
+  $('#teacherLoginHint').textContent='يجب تفعيل Firebase أولًا. راجعي ملف تعليمات-التفعيل.';
+}else if(typeof firebase==='undefined'){
+  reportBanner('تعذّر تحميل خدمة Firebase. تحققي من اتصال الإنترنت.',true);
+}else {
+  try{
+    firebase.initializeApp(config);
+    db=firebase.firestore();auth=firebase.auth();cloudReady=true;
+    reportBanner('');
+    cloudListeners.push(db.collection('settings').doc('main').onSnapshot(doc=>{
+      cloudSettings={open:true,notice:'',bankInitialized:false,...(doc.exists?doc.data():{})};
+      initialSettingsLoaded=true;showPublicSettings();if(requireTeacher())renderDashboard();
+    },e=>{reportBanner('لا يمكن قراءة إعدادات المنصة. تحققي من قواعد Firestore.',true);console.error(e)}));
+    cloudListeners.push(db.collection('questions').onSnapshot(snap=>{
+      cloudQuestions=snap.docs.map(doc=>({id:doc.id,...doc.data()}));
+      initialQuestionsLoaded=true;renderDomains();if(requireTeacher())renderDashboard();
+    },e=>{reportBanner('لا يمكن قراءة الأسئلة من Firebase. تحققي من القواعد.',true);console.error(e)}));
+    auth.onAuthStateChanged(user=>{
+      if(user && user.email?.toLowerCase()===TEACHER_EMAIL){signedTeacher=user;showTeacherScreen()}
+      else{signedTeacher=null;stopResultsListener();if(!$('#adminView').hidden)goHome()}
+    });
+  }catch(err){cloudReady=false;console.error(err);reportBanner('إعدادات Firebase غير صحيحة؛ تواصلي مع مسؤولة المنصة لإصلاحها.',true)}
+}
+
+</script>
+</body>
+</html>
